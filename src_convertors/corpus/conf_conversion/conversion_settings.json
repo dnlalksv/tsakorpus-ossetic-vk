@@ -1,0 +1,30 @@
+{
+  "meta_filename": "meta.txt",
+  "meta_fields":
+  [
+    "filename",
+    "title",
+    "author",
+    "year_from",
+    "year_to",
+    "genre",
+    "issue",
+    "url"
+  ],
+  "languages": ["ossetic"],
+  "meta_files_ext": true,
+  "meta_files_dir": false,
+  "meta_files_case_sensitive": true,
+  "parsed_wordlist_filename": "wordlist_denorm.txt",
+  "parsed_wordlist_format": "xml_rnc",
+  "cg_disambiguate": false,
+  "json_indent": -1,
+  "convert_quotes": false,
+  "gzip": true,
+  "left_quot_mark": "«",
+  "right_quot_mark": "»",
+  "sent_end_punc": "(?:[.!?;;]+(?:[)\\]}>/»]|$)|\\\\n)",
+  "sent_start": "^[A-ZËÇÄÖÜА-ЯӔЁӤӦӴӞӜҒӢҚӮҲҶ]",
+  "newline_ends_sent": true,
+  "abbreviations": []
+}

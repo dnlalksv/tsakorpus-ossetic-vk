@@ -1,0 +1,486 @@
+{
+  "corpus_name": "ossetic_vk",
+  "citation": "<p>Осетинский ВКонтакте корпус.</p>",
+  "start_page_url": "http://ossetic.web-corpora.net/",
+  "input_format": "json-gzip",
+  "debug": false,
+  "media": false,
+  "media_length": 60,
+  "generate_dictionary": true,
+  "max_context_expand": 4,
+  "max_distance_filter": 200000,
+  "max_docs_retrieve": 9999,
+  "max_words_in_sentence": 40,
+  "query_timeout": 60,
+  "viewable_meta": [
+    "filename",
+    "title",
+    "author",
+    "year_from",
+    "year_to",
+    "genre",
+    "issue"
+  ],
+  "sentence_meta": [
+  ],
+  "search_meta": {
+    "columns": [
+      [
+        {"type": "input_text", "name": "author", "placeholder": "Author"},
+        {"type": "input_text", "name": "title", "placeholder": "Title"},
+        {"type": "input_text", "name": "translator", "placeholder": "Translator"},
+        {"type": "separator"},
+        {"type": "input_number", "name": "year_from", "placeholder": "Year: from"},
+        {"type": "input_number", "name": "year_to", "placeholder": "Year: to"}
+      ],
+      [
+        {"type": "input_text", "name": "genre", "placeholder": "Genre"},
+        {"type": "option", "name": "genre", "value": "проза", "text": "проза"},
+        {"type": "option", "name": "genre", "value": "поэзия", "text": "поэзия"},
+        {"type": "option", "name": "genre", "value": "драма", "text": "драма"},
+        {"type": "option", "name": "genre", "value": "сказки", "text": "сказки"},
+        {"type": "option", "name": "genre", "value": "газета", "text": "газета"},
+        {"type": "option", "name": "genre", "value": "научная", "text": "научная/учебная литература"},
+        {"type": "option", "name": "genre", "value": "публицистика", "text": "публицистика"},
+        {"type": "option", "name": "genre", "value": "религиозная", "text": "религиозная литература"},
+        {"type": "option", "name": "genre", "value": "мемуары", "text": "мемуарно-библиографическая литература"},	
+        {"type": "option", "name": "genre", "value": "политика", "text": "политическая литература"},
+        {"type": "option", "name": "genre", "value": "юридическая", "text": "юридическая литература"}
+      ]
+    ],
+    "stat_options": [
+      "genre",
+      "author",
+      "translator",
+      "title",
+      "year"
+    ]
+  },
+  "word_fields":
+  [
+    "trans_ru",
+    "trans_en"
+  ],
+  "languages": ["ossetic"],
+  "transliterations": ["original", "latin"],
+  "input_methods": ["normal", "strict", "latin"],
+  "interface_languages": ["en", "ru"],
+  "keyboards": {
+    "ossetic": "ossetic"
+  },
+  "all_language_search_enabled": true,
+  "gloss_search_enabled": true,
+  "ambiguous_analyses": true,
+  "lang_props":
+  {
+    "ossetic":
+    {
+      "dictionary_categories": ["nGend", "nAn", "proType", "nType", "tr", "prGov"],
+      "gloss_shortcuts": {
+      },
+      "gr_fields_order": ["tr", "prGov", "mood", "vForm", "tense", "voice", "pers", "nAn", "nGend", "number", "case", "nDef", "vCl", "add"],
+      "gloss_selection": {
+        "columns": [
+         [  
+          {"type": "header", "value": "Nominal number"},
+          {"type": "gloss", "value": "PL", "category": "number", "tooltip": "plural"},
+          {"type": "gloss", "value": "PL.anim", "category": "number", "tooltip": "plural animate"},
+          {"type": "gloss", "value": "PL.ar", "category": "number", "tooltip": "plural Arabic"},
+          {"type": "gloss", "value": "PL.ar.m", "category": "number", "tooltip": "plural Arabic -ин"},
+          {"type": "header", "value": "Definiteness"},
+          {"type": "gloss", "value": "OBJ.DEF", "category": "nDef", "tooltip": "postosition ро"},
+          {"type": "gloss", "value": "INDEF", "category": "nDef", "tooltip": "indefinite marker -е"},
+          {"type": "header", "value": "Degree"},
+          {"type": "gloss", "value": "SUPER", "category": "deg", "tooltip": "superlative"},
+          {"type": "gloss", "value": "COMPAR", "category": "deg", "tooltip": "comparative"}
+        ],
+         [
+          {"type": "header", "value": "Ezafe"},
+          {"type": "gloss", "value": "EZF", "category": "ezf", "tooltip": "ezafe"},
+          {"type": "header", "value": "Relative"},
+          {"type": "gloss", "value": "REL", "category": "rel", "tooltip": "relative marker -е"},
+          {"type": "header", "value": "Possessives"},
+          {"type": "gloss", "value": "POSS.1SG", "category": "poss", "tooltip": "1st person singular possessive pronoun"},
+          {"type": "gloss", "value": "POSS.2SG", "category": "poss", "tooltip": "2nd person singular possessive pronoun"},
+          {"type": "gloss", "value": "POSS.3SG", "category": "poss", "tooltip": "3rd person singular possessive pronoun"},
+          {"type": "gloss", "value": "POSS.1PL", "category": "poss", "tooltip": "1st person singular possessive pronoun"},
+          {"type": "gloss", "value": "POSS.2PL", "category": "poss", "tooltip": "2nd person singular possessive pronoun"},
+          {"type": "gloss", "value": "POSS.3PL", "category": "poss", "tooltip": "3rd person singular possessive pronoun"}
+        ],
+         [
+          {"type": "header", "value": "adjective suffix"},
+          {"type": "gloss", "value": "ADJ1", "category": "Adj", "tooltip": "adjective suffix -ӣ/-вӣ/-гӣ"},
+          {"type": "gloss", "value": "ADJ2", "category": "Adj", "tooltip": "adjective suffix -нок"},
+          {"type": "gloss", "value": "ADJ3", "category": "Adj", "tooltip": "adjective suffix -она/-гона"},
+          {"type": "gloss", "value": "ADJ4", "category": "Adj", "tooltip": "adjective suffix -онӣ"},
+          {"type": "gloss", "value": "ADJ5", "category": "Adj", "tooltip": "adjective suffix -ангӣ"},
+          {"type": "gloss", "value": "ADJ6", "category": "Adj", "tooltip": "adjective suffix -ин/-гин"},
+          {"type": "gloss", "value": "SIMILAR", "category": "Adj", "tooltip": "adjective suffix -гун"},
+          {"type": "gloss", "value": "SIMILAR2", "category": "Adj", "tooltip": "adjective suffix -монанд"}
+        ],
+         [
+          {"type": "header", "value": "nominative suffix"},
+          {"type": "gloss", "value": "ABS", "category": "noun", "tooltip": "abstract noun, suffix -ӣ/-вӣ/-гӣ"},
+          {"type": "gloss", "value": "AG1", "category": "noun", "tooltip": "agentive suffix -чӣ"},
+          {"type": "gloss", "value": "AG2", "category": "noun", "tooltip": "agentive suffix -гар"},
+          {"type": "gloss", "value": "AG3", "category": "noun", "tooltip": "agentive suffix -бон"},
+          {"type": "gloss", "value": "AG4", "category": "noun", "tooltip": "agentive suffix -ор"},
+          {"type": "gloss", "value": "AG5", "category": "noun", "tooltip": "agentive suffix -гор"},
+          {"type": "gloss", "value": "AG6", "category": "noun", "tooltip": "agentive suffix -вар"},
+          {"type": "gloss", "value": "AG7", "category": "noun", "tooltip": "agentive suffix -кор"},
+          {"type": "gloss", "value": "HOUSE", "category": "noun", "tooltip": "suffix -хона"}
+        ],
+         [
+          {"type": "gloss", "value": "DEMIN1", "category": "noun", "tooltip": "diminutive suffix -ҷон"},
+          {"type": "gloss", "value": "DEMIN2", "category": "noun", "tooltip": "diminutive suffix -ак/-аккак"},
+          {"type": "gloss", "value": "DEMIN3", "category": "noun", "tooltip": "diminutive suffix -ча/-чек/-ичек"},
+          {"type": "gloss", "value": "DEMIN4", "category": "noun", "tooltip": "diminutive suffix -ина"},
+          {"type": "gloss", "value": "HAVE", "category": "noun", "tooltip": "suffix -манд"},
+          {"type": "gloss", "value": "PLACE1", "category": "noun", "tooltip": "suffix -(и)стон"},
+          {"type": "gloss", "value": "PLACE2", "category": "noun", "tooltip": "suffix -зор"},
+          {"type": "gloss", "value": "PLACE3", "category": "noun", "tooltip": "suffix -сор"},
+          {"type": "gloss", "value": "PLACE4", "category": "noun", "tooltip": "suffix -гоҳ"},
+          {"type": "gloss", "value": "PLACE5", "category": "noun", "tooltip": "suffix -дон"}
+        ],
+         [
+          {"type": "header", "value": "Tense"},
+          {"type": "gloss", "value": "PRS.1SG", "category": "Verb", "tooltip": "present tense 1st person singular"},
+          {"type": "gloss", "value": "PRS.2SG", "category": "Verb", "tooltip": "present tense 2nd person singular"},
+          {"type": "gloss", "value": "PRS.3SG", "category": "Verb", "tooltip": "present tense 3rd person singular"},
+          {"type": "gloss", "value": "PRS.1PL", "category": "Verb", "tooltip": "present tense 1st person plural"},
+          {"type": "gloss", "value": "PRS.2PL", "category": "Verb", "tooltip": "present tense 2nd person plural"},
+          {"type": "gloss", "value": "PRS.3PL", "category": "Verb", "tooltip": "present tense 3rd person plural"},
+          {"type": "gloss", "value": "PST.1SG", "category": "Verb", "tooltip": "past tense 1st person singular"},
+          {"type": "gloss", "value": "PST.2SG", "category": "Verb", "tooltip": "past tense 2nd person singular"},
+          {"type": "gloss", "value": "PST.3SG", "category": "Verb", "tooltip": "past tense 3rd person singular"},
+          {"type": "gloss", "value": "PST.1PL", "category": "Verb", "tooltip": "past tense 1st person plural"},
+          {"type": "gloss", "value": "PST.2PL", "category": "Verb", "tooltip": "past tense 2nd person plural"},
+          {"type": "gloss", "value": "PST.3PL", "category": "Verb", "tooltip": "past tense 3rd person plural"},
+          {"type": "gloss", "value": "FUT.1SG", "category": "Verb", "tooltip": "future tense 1st person singular"},
+          {"type": "gloss", "value": "FUT.2SG", "category": "Verb", "tooltip": "future tense 2nd person singular"},
+          {"type": "gloss", "value": "FUT.3SG", "category": "Verb", "tooltip": "future tense 3rd person singular"},
+          {"type": "gloss", "value": "FUT.1PL", "category": "Verb", "tooltip": "future tense 1st person plural"},
+          {"type": "gloss", "value": "FUT.2PL", "category": "Verb", "tooltip": "future tense 2nd person plural"},
+          {"type": "gloss", "value": "FUT.3PL", "category": "Verb", "tooltip": "future tense 3rd person plural"}          
+        ],
+         [
+          {"type": "gloss", "value": "HAB", "category": "Verb", "tooltip": "imperfect and evidential durative forms"},           
+          {"type": "gloss", "value": "PRF.1SG", "category": "Verb", "tooltip": "perfect 1st person singular"},
+          {"type": "gloss", "value": "PRF.2SG", "category": "Verb", "tooltip": "perfect 2nd person singular"},
+          {"type": "gloss", "value": "PRF.3SG", "category": "Verb", "tooltip": "perfect 3rd person singular"},
+          {"type": "gloss", "value": "PRF.1PL", "category": "Verb", "tooltip": "perfect 1st person plural"},
+          {"type": "gloss", "value": "PRF.2PL", "category": "Verb", "tooltip": "perfect 2nd person plural"},
+          {"type": "gloss", "value": "PRF.3PL", "category": "Verb", "tooltip": "perfect 3rd person plural"}
+        ],
+         [
+          {"type": "header", "value": "Mood"},
+          {"type": "gloss", "value": "CNJECT.PRS.1SG", "category": "Verb", "tooltip": "present conjectural 1st person singular"},
+          {"type": "gloss", "value": "CNJECT.PRS.3SG", "category": "Verb", "tooltip": "present conjectural 2nd person singular"},
+          {"type": "gloss", "value": "CNJECT.PRS.3SG", "category": "Verb", "tooltip": "present conjectural 3rd person singular"},
+          {"type": "gloss", "value": "CNJECT.PRS.1PL", "category": "Verb", "tooltip": "present conjectural 1st person plural"},
+          {"type": "gloss", "value": "CNJECT.PRS.2PL", "category": "Verb", "tooltip": "present conjectural 2nd person plural"},
+          {"type": "gloss", "value": "CNJECT.PRS.3PL", "category": "Verb", "tooltip": "present conjectural 3rd person plural"},
+          {"type": "gloss", "value": "CNJECT2.PRS.1SG", "category": "Verb", "tooltip": "present conjectural with copular 1st person singular"},
+          {"type": "gloss", "value": "CNJECT2.PRS.3SG", "category": "Verb", "tooltip": "present conjectural with copular 2nd person singular"},
+          {"type": "gloss", "value": "CNJECT2.PRS.3SG", "category": "Verb", "tooltip": "present conjectural with copular 3rd person singular"},
+          {"type": "gloss", "value": "CNJECT2.PRS.1PL", "category": "Verb", "tooltip": "present conjectural with copular 1st person plural"},
+          {"type": "gloss", "value": "CNJECT2.PRS.2PL", "category": "Verb", "tooltip": "present conjectural with copular 2nd person plural"},
+          {"type": "gloss", "value": "CNJECT2.PRS.3PL", "category": "Verb", "tooltip": "present conjectural with copular 3rd person plural"}
+        ],
+         [
+          {"type": "gloss", "value": "CNJECT.PST.1SG", "category": "Verb", "tooltip": "past conjectural 1st person singular"},
+          {"type": "gloss", "value": "CNJECT.PST.2SG", "category": "Verb", "tooltip": "past conjectural 2nd person singular"},
+          {"type": "gloss", "value": "CNJECT.PST.3SG", "category": "Verb", "tooltip": "past conjectural 3rd person singular"},
+          {"type": "gloss", "value": "CNJECT.PST.1PL", "category": "Verb", "tooltip": "past conjectural 1st person plural"},
+          {"type": "gloss", "value": "CNJECT.PST.2PL", "category": "Verb", "tooltip": "past conjectural 2nd person plural"},
+          {"type": "gloss", "value": "CNJECT.PST.3PL", "category": "Verb", "tooltip": "past conjectural 3rd person plural"},
+          {"type": "gloss", "value": "CNJECT2.PST.1SG", "category": "Verb", "tooltip": "past conjectural with copular 1st person singular"},
+          {"type": "gloss", "value": "CNJECT2.PST.2SG", "category": "Verb", "tooltip": "past conjectural with copular 2nd person singular"},
+          {"type": "gloss", "value": "CNJECT2.PST.3SG", "category": "Verb", "tooltip": "past conjectural with copular 3rd person singular"},
+          {"type": "gloss", "value": "CNJECT2.PST.1PL", "category": "Verb", "tooltip": "past conjectural with copular 1st person plural"},
+          {"type": "gloss", "value": "CNJECT2.PST.2PL", "category": "Verb", "tooltip": "past conjectural with copular 2nd person plural"},
+          {"type": "gloss", "value": "CNJECT2.PST.3PL", "category": "Verb", "tooltip": "past conjectural with copular 3rd person plural"}
+        ],
+         [
+          {"type": "gloss", "value": "IMP.SBJV", "category": "Verb", "tooltip": "imperative or subjunctive forms with bi-"},
+          {"type": "gloss", "value": "IMP.2SG", "category": "Verb", "tooltip": "imperative 2nd person singular"},
+          {"type": "gloss", "value": "IMP.2PL", "category": "Verb", "tooltip": "imperative 2nd person plural"},
+          {"type": "gloss", "value": "INT.1SG", "category": "Verb", "tooltip": "intention 1st person singular"},
+          {"type": "gloss", "value": "INT.2SG", "category": "Verb", "tooltip": "intention 2nd person singular"},
+          {"type": "gloss", "value": "INT.3SG", "category": "Verb", "tooltip": "intention 3rd person singular"},
+          {"type": "gloss", "value": "INT.1PL", "category": "Verb", "tooltip": "intention 1st person plural"},
+          {"type": "gloss", "value": "INT.2PL", "category": "Verb", "tooltip": "intention 2nd person plural"},
+          {"type": "gloss", "value": "INT.3PL", "category": "Verb", "tooltip": "intention 3rd person plural"},
+          {"type": "gloss", "value": "SBJV.1SG", "category": "Verb", "tooltip": "subjunctive 1st person singular"},
+          {"type": "gloss", "value": "SBJV.2SG", "category": "Verb", "tooltip": "subjunctive 2nd person singular"},
+          {"type": "gloss", "value": "SBJV.3SG", "category": "Verb", "tooltip": "subjunctive 3rd person singular"},
+          {"type": "gloss", "value": "SBJV.1PL", "category": "Verb", "tooltip": "subjunctive 1st person plural"},
+          {"type": "gloss", "value": "SBJV.2PL", "category": "Verb", "tooltip": "subjunctive 2nd person plural"},
+          {"type": "gloss", "value": "SBJV.3PL", "category": "Verb", "tooltip": "subjunctive 3rd person plural"}
+        ],
+         [
+          {"type": "header", "value": "Non-finite verb forms"},
+          {"type": "gloss", "value": "INF", "category": "Verb", "tooltip": "infinitive"},
+          {"type": "gloss", "value": "PART.FUT", "category": "Verb", "tooltip": "future participle in -анӣ"},
+          {"type": "gloss", "value": "PART.MOD.PST", "category": "Verb", "tooltip": "past modal participle in -агӣ"},
+          {"type": "gloss", "value": "PART.MOD.PRS", "category": "Verb", "tooltip": "present modal participle in ме-...-агӣ"},
+          {"type": "gloss", "value": "PART.PRS", "category": "Verb", "tooltip": "present participle in -анда"},
+          {"type": "gloss", "value": "PART.PST", "category": "Verb", "tooltip": "past participle in -та/-да"},
+          {"type": "gloss", "value": "HAB.PART.PST", "category": "Verb", "tooltip": "imperfect past participle in -та/-да"},
+          {"type": "gloss", "value": "PASS.PART.PST", "category": "Verb", "tooltip": "passive past participle in -ташуда/-дашуда"},
+          {"type": "gloss", "value": "V.ADV", "category": "Verb", "tooltip": "present participle in -он"}
+        ],
+         [
+          {"type": "header", "value": "Copular"},
+          {"type": "gloss", "value": "COP.1SG", "category": "cop", "tooltip": "copular 1st person singular"},
+          {"type": "gloss", "value": "COP.2SG", "category": "cop", "tooltip": "copular 2nd person singular"},
+          {"type": "gloss", "value": "COP.3SG", "category": "cop", "tooltip": "copular 3rd person singular"},
+          {"type": "gloss", "value": "COP.1PL", "category": "cop", "tooltip": "copular 1st person plural"},
+          {"type": "gloss", "value": "COP.2PL", "category": "cop", "tooltip": "copular 2nd person plural"},
+          {"type": "gloss", "value": "COP.3PL", "category": "cop", "tooltip": "copular 3rd person plural"}
+        ],
+         [
+          {"type": "header", "value": "Verbal person"},
+          {"type": "gloss", "value": "1SG", "category": "v.pers", "tooltip": "imperative or subjunctive 1st person singular"},
+          {"type": "gloss", "value": "2SG", "category": "v.pers", "tooltip": "imperative or subjunctive 2nd person singular"},
+          {"type": "gloss", "value": "3SG", "category": "v.pers", "tooltip": "imperative or subjunctive 3rd person singular"},
+          {"type": "gloss", "value": "1PL", "category": "v.pers", "tooltip": "imperative or subjunctive 1st person plural"},
+          {"type": "gloss", "value": "2PL", "category": "v.pers", "tooltip": "imperative or subjunctive 2nd person plural"},
+          {"type": "gloss", "value": "3PL", "category": "v.pers", "tooltip": "imperative or subjunctive 3rd person plural"},
+          {"type": "header", "value": "Verbal negation"},
+          {"type": "gloss", "value": "NEG", "category": "neg", "tooltip": "prefix на-"},
+          {"type": "gloss", "value": "NEG2", "category": "neg", "tooltip": "prefix ма-"}
+        ],
+         [
+          {"type": "header", "value": "Conjunction"},
+          {"type": "gloss", "value": "and", "category": "conj", "tooltip": "conjunction у/ву/ва 'and'"},
+          {"type": "gloss", "value": "PST.3SG.and", "category": "conj", "tooltip": "past tense 3rd person singular, conjunction 'and'"},
+          {"type": "gloss", "value": "IMP.2SG.and", "category": "conj", "tooltip": "imperative 2nd person singular, conjunction 'and'"}
+        ] 
+       ]
+      },
+      "gramm_selection": {
+        "columns": [
+         [
+          {"type": "header", "value": "Parts of speech"},
+          {"type": "gramm", "value": "N", "category": "pos", "tooltip": "noun"},
+          {"type": "gramm", "value": "V", "category": "pos", "tooltip": "verb"},
+          {"type": "gramm", "value": "cop", "category": "pos", "tooltip": "copular"},
+          {"type": "gramm", "value": "ADJ", "category": "pos", "tooltip": "adjective"},
+          {"type": "gramm", "value": "ADV", "category": "pos", "tooltip": "adverb"},
+          {"type": "gramm", "value": "NUM", "category": "pos", "tooltip": "numeral"},
+          {"type": "gramm", "value": "PRON", "category": "pos", "tooltip": "pronoun"},
+          {"type": "gramm", "value": "CONJ", "category": "pos", "tooltip": "conjunction"},
+          {"type": "gramm", "value": "INTJ", "category": "pos", "tooltip": "interjection"},
+          {"type": "gramm", "value": "part", "category": "pos", "tooltip": "participle"},
+          {"type": "gramm", "value": "PREP", "category": "pos", "tooltip": "preposition"},
+          {"type": "gramm", "value": "POST", "category": "pos", "tooltip": "postposition"},
+          {"type": "gramm", "value": "PRTCL", "category": "pos", "tooltip": "particle"}
+        ],
+         [ 
+          {"type": "header", "value": "Nominal number"},
+          {"type": "gramm", "value": "sg", "category": "N.num", "tooltip": "singular"},
+          {"type": "gramm", "value": "pl", "category": "N.num", "tooltip": "plural"},
+          {"type": "gramm", "value": "pl.anim", "category": "N.num", "tooltip": "plural animate"},
+          {"type": "gramm", "value": "pl.ar", "category": "N.num", "tooltip": "plural Arabic"},
+          {"type": "gramm", "value": "pl.ar.m", "category": "N.num", "tooltip": "plural Arabic -ин"},
+          {"type": "header", "value": "Definiteness"},
+          {"type": "gramm", "value": "obj.def", "category": "def", "tooltip": "postosition ро"},
+          {"type": "gramm", "value": "indef", "category": "def", "tooltip": "indefinite marker -е"},
+          {"type": "header", "value": "Animacy"},
+          {"type": "gramm", "value": "anim", "category": "anim", "tooltip": "animate"},
+          {"type": "header", "value": "Humanity"},
+          {"type": "gramm", "value": "hum", "category": "hum", "tooltip": "human"},
+          {"type": "gramm", "value": "nonhuman", "category": "hum", "tooltip": "nonhuman"}
+        ],
+         [
+          {"type": "header", "value": "Proper names"},
+          {"type": "gramm", "value": "prop", "category": "prop", "tooltip": "proper name"},
+          {"type": "gramm", "value": "m", "category": "prop", "tooltip": "masculine proper name"},
+          {"type": "gramm", "value": "f", "category": "prop", "tooltip": "feminine proper name"},
+          {"type": "header", "value": "semantics"},
+          {"type": "gramm", "value": "kinship", "category": "sem", "tooltip": "kinship"},
+          {"type": "gramm", "value": "bodypart", "category": "sem", "tooltip": "bodypart"},
+          {"type": "gramm", "value": "color", "category": "sem", "tooltip": "color"},
+          {"type": "gramm", "value": "prop", "category": "sem", "tooltip": "proper noun"},
+          {"type": "header", "value": "Modality"},
+          {"type": "gramm", "value": "mod", "category": "mod", "tooltip": "modal word (N,ADJ,PRTCL or V)"}
+        ],
+         [
+          {"type": "header", "value": "Degree"},
+          {"type": "gramm", "value": "super", "category": "deg", "tooltip": "superlative"},
+          {"type": "gramm", "value": "compar", "category": "deg", "tooltip": "comparative"},
+          {"type": "header", "value": "adjective suffix"},
+          {"type": "gramm", "value": "suf.adj", "category": "adj.suf", "tooltip": "any derivational adjective suffix"},
+          {"type": "gramm", "value": "adj1", "category": "adj.suf", "tooltip": "adjective suffix -ӣ/-вӣ/-гӣ"},
+          {"type": "gramm", "value": "adj2", "category": "adj.suf", "tooltip": "adjective suffix -нок"},
+          {"type": "gramm", "value": "adj3", "category": "adj.suf", "tooltip": "adjective suffix -она/-гона"},
+          {"type": "gramm", "value": "adj4", "category": "adj.suf", "tooltip": "adjective suffix -онӣ"},
+          {"type": "gramm", "value": "adj5", "category": "adj.suf", "tooltip": "adjective suffix -ангӣ"},
+          {"type": "gramm", "value": "adj6", "category": "adj.suf", "tooltip": "adjective suffix -ин/-гин"},
+          {"type": "gramm", "value": "similar", "category": "adj.suf", "tooltip": "adjective suffix -гун"},
+          {"type": "gramm", "value": "similar2", "category": "adj.suf", "tooltip": "adjective suffix -монанд"}
+        ],
+         [
+          {"type": "header", "value": "nominative suffix"},
+          {"type": "gramm", "value": "suf.n", "category": "n.suf", "tooltip": "any derivational nominal suffix"},
+          {"type": "gramm", "value": "abs", "category": "n.suf", "tooltip": "abstract noun, suffix -ӣ/-вӣ/-гӣ"},
+          {"type": "gramm", "value": "ag", "category": "n.suf", "tooltip": "any agentive suffix"},
+          {"type": "gramm", "value": "ag1", "category": "n.suf", "tooltip": "agentive suffix -чӣ"},
+          {"type": "gramm", "value": "ag2", "category": "n.suf", "tooltip": "agentive suffix -гар"},
+          {"type": "gramm", "value": "ag3", "category": "n.suf", "tooltip": "agentive suffix -бон"},
+          {"type": "gramm", "value": "ag4", "category": "n.suf", "tooltip": "agentive suffix -ор"},
+          {"type": "gramm", "value": "ag5", "category": "n.suf", "tooltip": "agentive suffix -гор"},
+          {"type": "gramm", "value": "ag6", "category": "n.suf", "tooltip": "agentive suffix -вар"},
+          {"type": "gramm", "value": "ag7", "category": "n.suf", "tooltip": "agentive suffix -кор"},
+          {"type": "gramm", "value": "have", "category": "n.suf", "tooltip": "suffix -манд"}
+        ],
+         [
+          {"type": "gramm", "value": "dimin", "category": "n.suf", "tooltip": "any diminutive suffix"},
+          {"type": "gramm", "value": "dimin1", "category": "n.suf", "tooltip": "diminutive suffix -ҷон"},
+          {"type": "gramm", "value": "dimin2", "category": "n.suf", "tooltip": "diminutive suffix -ак/-аккак"},
+          {"type": "gramm", "value": "dimin3", "category": "n.suf", "tooltip": "diminutive suffix -ча/-чек/-ичек"},
+          {"type": "gramm", "value": "dimin4", "category": "n.suf", "tooltip": "diminutive suffix -ина"},
+          {"type": "gramm", "value": "house", "category": "n.suf", "tooltip": "suffix -хона"},
+          {"type": "gramm", "value": "place", "category": "n.suf", "tooltip": "any suffix conveying place or container"},
+          {"type": "gramm", "value": "place1", "category": "n.suf", "tooltip": "suffix -(и)стон"},
+          {"type": "gramm", "value": "place2", "category": "n.suf", "tooltip": "suffix -зор"},
+          {"type": "gramm", "value": "place3", "category": "n.suf", "tooltip": "suffix -сор"},
+          {"type": "gramm", "value": "place4", "category": "n.suf", "tooltip": "suffix -гоҳ"},
+          {"type": "gramm", "value": "place5", "category": "n.suf", "tooltip": "suffix -дон"}
+        ],
+         [
+          {"type": "header", "value": "Ezafe"},
+          {"type": "gramm", "value": "ezf", "category": "ezf", "tooltip": "ezafe"},
+          {"type": "header", "value": "Relative"},
+          {"type": "gramm", "value": "rel", "category": "rel", "tooltip": "relative"},
+          {"type": "header", "value": "Possessives"},
+          {"type": "gramm", "value": "poss", "category": "poss", "tooltip": "possessive pronoun"},
+          {"type": "gramm", "value": "poss.sg", "category": "poss", "tooltip": "possessive pronoun singular"},
+          {"type": "gramm", "value": "poss.pl", "category": "poss", "tooltip": "possessive pronoun plural"},
+          {"type": "gramm", "value": "poss.1", "category": "poss", "tooltip": "1st person possessive pronoun"},
+          {"type": "gramm", "value": "poss.2", "category": "poss", "tooltip": "2nd person possessive pronoun"},
+          {"type": "gramm", "value": "poss.3", "category": "poss", "tooltip": "3rd person possessive pronoun"}
+        ],
+         [
+          {"type": "header", "value": "Numeral"},
+          {"type": "gramm", "value": "ord", "category": "NUM", "tooltip": "ordinal numeral"},
+          {"type": "gramm", "value": "fract", "category": "NUM", "tooltip": "fraction numeral"},
+          {"type": "header", "value": "Pronoun"},
+          {"type": "gramm", "value": "pers", "category": "PRON", "tooltip": "personal pronoun"},
+          {"type": "gramm", "value": "DEM", "category": "PRON", "tooltip": "demonstrative pronoun"},
+          {"type": "gramm", "value": "prox", "category": "PRON", "tooltip": "proximal demonstrative"},
+          {"type": "gramm", "value": "dist", "category": "PRON", "tooltip": "distal demonstrative"}
+        ],
+         [
+          {"type": "header", "value": "Type of verb"},
+          {"type": "gramm", "value": "caus", "category": "caus", "tooltip": "causative"},
+          {"type": "header", "value": "Tense"},
+          {"type": "gramm", "value": "hab", "category": "tense", "tooltip": "imperfect and evidential durative forms"},            
+          {"type": "gramm", "value": "prf", "category": "tense", "tooltip": "perfect"},
+          {"type": "gramm", "value": "prs", "category": "tense", "tooltip": "present"},
+          {"type": "gramm", "value": "pst", "category": "tense", "tooltip": "past"},
+          {"type": "gramm", "value": "fut", "category": "tense", "tooltip": "future"},
+          {"type": "gramm", "value": "pluprf", "category": "tense", "tooltip": "pluperfect"},
+          {"type": "gramm", "value": "pluprf.evid", "category": "tense", "tooltip": "evidential pluperfect"},
+          {"type": "gramm", "value": "hab,pst", "category": "tense", "tooltip": "imperfect"},
+          {"type": "gramm", "value": "hab,prf", "category": "tense", "tooltip": "evidential durative"},
+          {"type": "header", "value": "Copular"},
+          {"type": "gramm", "value": "cop", "category": "cop", "tooltip": "copular"},
+          {"type": "gramm", "value": "cop.v", "category": "cop", "tooltip": "copular verb"},
+          {"type": "gramm", "value": "cop.encl", "category": "cop", "tooltip": "copular enclitic"}
+        ],
+         [
+          {"type": "header", "value": "Mood"},
+          {"type": "gramm", "value": "bi", "category": "mood", "tooltip": "prefix би- in imperative and subjunctive"},
+          {"type": "gramm", "value": "indir", "category": "mood", "tooltip": "any non-indicative mood"},
+          {"type": "gramm", "value": "cnject", "category": "mood", "tooltip": "conjectural mood"},
+          {"type": "gramm", "value": "cnject,prs", "category": "mood", "tooltip": "present conjectural mood"},
+          {"type": "gramm", "value": "cnject,pst", "category": "mood", "tooltip": "past conjectural mood"},
+          {"type": "gramm", "value": "cnject2", "category": "mood", "tooltip": "conjectural mood with copular"},
+          {"type": "gramm", "value": "cnject2,prs", "category": "mood", "tooltip": "present conjectural mood with copular"},
+          {"type": "gramm", "value": "cnject2,pst", "category": "mood", "tooltip": "past conjectural mood with copular"},
+          {"type": "gramm", "value": "imp", "category": "mood", "tooltip": "imperative"},
+          {"type": "gramm", "value": "int", "category": "mood", "tooltip": "intention, forms like raftaniam, raftanistam"},
+          {"type": "gramm", "value": "sbjv", "category": "mood", "tooltip": "subjunctive"},
+          {"type": "gramm", "value": "sbjv.hab", "category": "mood", "tooltip": "subjunctive durative"},
+          {"type": "gramm", "value": "sbjv.pst", "category": "mood", "tooltip": "past subjunctive"}
+        ],
+         [
+          {"type": "header", "value": "Progressive"},
+          {"type": "gramm", "value": "prog", "category": "mood", "tooltip": "progressive"},
+          {"type": "header", "value": "active"},
+          {"type": "gramm", "value": "prs.prog", "category": "mood", "tooltip": "present progressive"},
+          {"type": "gramm", "value": "pst.prog", "category": "mood", "tooltip": "past progressive"},
+          {"type": "gramm", "value": "cnject.prs.prog", "category": "mood", "tooltip": "present progressive conjectural"},
+          {"type": "gramm", "value": "cnject2.prs.prog", "category": "mood", "tooltip": "present progressive conjectural with copular"},
+          {"type": "header", "value": "passive"},
+          {"type": "gramm", "value": "prs.prog.pass", "category": "mood", "tooltip": "present progressive in passive"},
+          {"type": "gramm", "value": "pst.prog.pass", "category": "mood", "tooltip": "past progressive in passive"}
+        ],
+         [
+          {"type": "header", "value": "Passive"},
+          {"type": "header", "value": "Tense"},
+          {"type": "gramm", "value": "pass", "category": "tense", "tooltip": "passive"},
+          {"type": "gramm", "value": "prs.pass", "category": "tense", "tooltip": "present in passive"},
+          {"type": "gramm", "value": "pst.pass", "category": "tense", "tooltip": "past in passive"},
+          {"type": "gramm", "value": "prf.pass", "category": "tense", "tooltip": "perfect in passive"},
+          {"type": "gramm", "value": "impf.pass", "category": "tense", "tooltip": "imperfect in passive"},
+          {"type": "gramm", "value": "pluprf.pass", "category": "tense", "tooltip": "pluperfect in passive"},
+          {"type": "gramm", "value": "hab.prf.pass", "category": "tense", "tooltip": "evidential durative in passive"},
+          {"type": "gramm", "value": "pluprf.evid.pass", "category": "tense", "tooltip": "evidential pluperfect in passive"},
+          {"type": "gramm", "value": "fut.pass", "category": "tense", "tooltip": "future in passive"}
+        ],
+         [
+          {"type": "header", "value": "Passive"},
+          {"type": "header", "value": "Mood"},
+          {"type": "gramm", "value": "sbjv.pass", "category": "mood", "tooltip": "subjunctive in passive"},
+          {"type": "gramm", "value": "sbjv.pst.pass", "category": "mood", "tooltip": "subjunctive in past"},
+          {"type": "gramm", "value": "sbjv.hab.pass", "category": "mood", "tooltip": "subjunctive durative in passive"},
+          {"type": "gramm", "value": "cnject.prs.pass", "category": "mood", "tooltip": "present progressive conjectural in passive"},
+          {"type": "gramm", "value": "cnject.pst.pass", "category": "mood", "tooltip": "past progressive conjectural in passive"},
+          {"type": "gramm", "value": "cnject2.prs.pass", "category": "mood", "tooltip": "present progressive conjectural with copular in passive"},
+          {"type": "gramm", "value": "cnject2.pst.pass", "category": "mood", "tooltip": "past progressive conjectural with copular in passive"},
+          {"type": "header", "value": "Non-finite verb forms"},
+          {"type": "gramm", "value": "pass.part", "category": "part", "tooltip": "participle in passive"},
+          {"type": "gramm", "value": "part.mod.prs.pass", "category": "part", "tooltip": "present modal participle in passive"},
+          {"type": "gramm", "value": "part.mod.pst.pass", "category": "part", "tooltip": "past modal participle in passive"},
+          {"type": "gramm", "value": "pass.part.pst", "category": "part", "tooltip": "passive past participle in -ташуда/-дашуда"}
+        ],
+         [
+          {"type": "header", "value": "Non-finite verb forms"},
+          {"type": "gramm", "value": "inf", "category": "part", "tooltip": "infinitive"},
+          {"type": "gramm", "value": "part", "category": "part", "tooltip": "any participle"},
+          {"type": "gramm", "value": "part.fut", "category": "part", "tooltip": "future participle in -анӣ"},
+          {"type": "gramm", "value": "part.mod", "category": "part", "tooltip": "modal participle in -агӣ"},
+          {"type": "gramm", "value": "part.mod.pst", "category": "part", "tooltip": "past modal participle in -агӣ"},
+          {"type": "gramm", "value": "part.mod.prs", "category": "part", "tooltip": "present modal participle in ме-...-агӣ"},
+          {"type": "gramm", "value": "part.prs", "category": "part", "tooltip": "present participle in -анда"},
+          {"type": "gramm", "value": "part.pst", "category": "part", "tooltip": "past participle in -та/-да"},
+          {"type": "gramm", "value": "part.prs.prog", "category": "part", "tooltip": "progressive participle"},
+          {"type": "gramm", "value": "hab.part.pst", "category": "part", "tooltip": "imperfect past participle in -та/-да"},
+          {"type": "gramm", "value": "conv.prs.prog", "category": "part", "tooltip": "present progressive converb"},
+          {"type": "gramm", "value": "v.adv", "category": "part", "tooltip": "present participle in -он"}
+        ],
+         [
+          {"type": "header", "value": "Verbal negation"},
+          {"type": "gramm", "value": "neg", "category": "neg", "tooltip": "prefix на-"},
+          {"type": "gramm", "value": "neg2", "category": "neg", "tooltip": "prefix ма-"},
+          {"type": "header", "value": "Verbal Person"},
+          {"type": "gramm", "value": "1", "category": "pers", "tooltip": "1st person"},
+          {"type": "gramm", "value": "2", "category": "pers", "tooltip": "2nd person"},
+          {"type": "gramm", "value": "3", "category": "pers", "tooltip": "3rd person"},
+          {"type": "gramm", "value": "hon", "category": "pers", "tooltip": "honorific"},
+          {"type": "header", "value": "Verbal number"},
+          {"type": "gramm", "value": "sg", "category": "verb.num", "tooltip": "singular"},
+          {"type": "gramm", "value": "pl", "category": "verb.num", "tooltip": "plural"}
+        ],
+         [
+          {"type": "header", "value": "Conjunction"},
+          {"type": "gramm", "value": "and", "category": "conj", "tooltip": "conjunction у/ву/ва 'and'"}
+        ]
+       ]
+      }
+    }
+  }
+}
